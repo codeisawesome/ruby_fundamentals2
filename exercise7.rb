@@ -25,3 +25,10 @@ puts ''
 #deleting corhort 2
 students.delete_if{|k,v| k == :cohort2 }
 students.each{|x,y| puts "#{x}: #{y}"}
+
+#summing all values of hash
+array = students.values
+puts ''
+
+puts "The total number of people in class"
+puts array.inject(:+)
