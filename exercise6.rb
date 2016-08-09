@@ -17,6 +17,9 @@ def addmis(item)
     puts "You need to pick up bananas"
   end
   puts "the second item in the list is #{grocery_list[1]}"
+  puts "there's no salmon left, so here's your new list"
+  grocery_list -= %w{salmon}
+  grocery_list.each{|x| puts "* " + x}
 end
 
 
