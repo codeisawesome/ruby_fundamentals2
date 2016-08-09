@@ -18,5 +18,10 @@ puts students.keys
 puts ''
 
 #increasing class size by 5%
-newstudents = Hash[students.map {|k,v| [k, v * 1.05]}]
-puts newstudents.each{|x,y| puts "#{x}: #{y}"}
+newstudents = students.map {|k,v| [k, v * 1.05]}
+newstudents.each{|x,y| puts "#{x}: #{y}"}
+puts ''
+
+#deleting corhort 2
+students.delete_if{|k,v| k == :cohort2 }
+students.each{|x,y| puts "#{x}: #{y}"}
