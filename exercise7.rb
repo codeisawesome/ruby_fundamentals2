@@ -4,13 +4,17 @@ students = {
   :cohort3 => 22
 }
 
+def listit(hash)
+  hash.each{|x,y| puts "#{x}: #{y}"}
+end
+
 #printing out key/value pair
-students.each{|x,y| puts "#{x}: #{y}"}
+listit(students)
 puts ''
 
 #Adding new cohort4 with 43 students
 students.merge!(cohort4: 43)
-students.each{|x,y| puts "#{x}: #{y}"}
+listit(students)
 puts''
 
 #printing out the names of each cohort
@@ -19,12 +23,12 @@ puts ''
 
 #increasing class size by 5%
 newstudents = students.map {|k,v| [k, v * 1.05]}
-newstudents.each{|x,y| puts "#{x}: #{y}"}
+listit(newstudents)
 puts ''
 
 #deleting corhort 2
 students.delete_if{|k,v| k == :cohort2 }
-students.each{|x,y| puts "#{x}: #{y}"}
+listit(students)
 
 #summing all values of hash
 
